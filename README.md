@@ -1,71 +1,120 @@
-# The Book borrower 📚
+# 📚 The Book borrower (Library management system) 
 
-## Project description
+A full-stack web application for managing book borrowing and user exchanges in a small community, built as a portfolio project using ASP.NET Web Forms and SQL Server.
 
-The book borrower is a web application meant to be used by small group of friends and aquintances who love to read and borrow their own books to each other. It works like library system, but in smaller scale, with book database that is visible to anyone and book exchange system which is accessable only to registered users. 
 
-### Programming language
+## 📌 Project description
+This application allows users to manage book borrowing within a small community. They can share books, borrow from others, and track exchanges — similar to a simplified library system.
 
-Application was made for school project with requirements of writting with ASP.NET and web forms, using C#, HTML, CSS and Javascript Databases were made in SQL. 
 
-### Challenges
+## 🛠️ Tech stack
+- ASP.NET Web Forms, C#
+- SQL Server
+- HTML, CSS, JavaScript
 
-The biggest challenge was implementation of SQL databases and succesfully writing queries and their parameters. 
 
-### Future improvements
+## 🚀 Features
+- User registration and login
+- Add, edit and delete books (admin)
+- Browse available books
+- Borrow and return books
+- Track currently borrowed books
+- User profile management
 
-Since this school project didn't required deployment of web application, there are no instructions for that, but it's one of the next steps for me. 
+## 🧭 How it works
 
-It is also one of the first versions of application, where I just now see what needs to be improved: 
-- For book exchange you need username, but you can't find them anywhere, in book database are just user names and surnames.
-- Book database and all the personal names are visible to anyone, I would correct it so that only registered users could see their names (and maybe even username).
-- On My profile page user sees only books that other borrowed from him, but he can't see whose books he's got.
+### 📚 Books
+Users can add their own books to the shared database. Each book includes:
+- Title and author
+- Owner information
+- Optional details (year, description, image)
 
-## How to Install and Run the Project
+### 🔄 Borrowing system
+- Users can borrow books by selecting:
+  - Book ID
+  - Owner username
+  - Date
+- Borrowed books are displayed in a shared list
+- Returning a book follows the same process
 
-1. Download code & Library database, save database to location by your choice.
-2. Open solution Izposoja.sln in Visual Studio.
-3. Configure database as Data Source:
-  - In Server Explorer add new connection, for Data Source choose Microsoft SQL Server Database File (SqlClient) and for data provider chose Microsof SqlClient Data Provider.
-  - Browse files to find location of saved database and chose it.
-  - Once you're connected to the database, open it's properties. In property Connection string copy whole line (Data Source=...)
-4. In Solution Explorer open file Web.config, go to <connectionStrings> section, where all the properties about connection to database are.
-    
+### 👤 User profile
+- Users can edit their personal data
+- View which of their books are currently borrowed
+
+### 🛠 Admin role
+Administrator can:
+- Add, edit and delete books
+- Manage users
+
+
+## 📷 Screenshots
+📌 These screenshots show the main functionality of the application.
+
+### 📚 App overview
+![Books](./screenshots/index.png)
+
+### ➕ Add book
+![Add book](./screenshots/add-book.png)
+
+### 🔄 Borrow system
+![Borrow](./screenshots/borrow.png)
+
+### 👤 User profile
+![Profile](./screenshots/profile.png)
+
+
+
+## 📚 What I learned
+- Designing and working with relational databases (SQL)
+- Implementing business logic for real-world scenarios
+- Handling user interactions in ASP.NET Web Forms
+- Managing data flow between UI and database
+
+
+## ⚠️ Known limitations
+- Usernames of other users are required for borrowing but not easily discoverable (list of usernames is only available to  admin)
+- Book and user data visibility is not restricted to logged-in users
+- Limited user insight into borrowed items (the user only sees books borrowed from them, but not books they have borrowed from others)
+
+
+## 🔮 Future improvements
+- Improve user visibility and privacy 
+- Enhance borrowing workflow and UX
+- Add better tracking of borrowed books
+- Modernize the application architecture (e.g. API-based backend)
+
+
+## ▶️ Running locally
+
+1. Clone or download the repository.
+
+2. Open the solution `Izposoja.sln` in Visual Studio.
+
+3. Configure the database:
+   - Open **Server Explorer** → Add Connection  
+   - Select **Microsoft SQL Server Database File (SqlClient)** 
+   - Choose Microsoft **SqlClient Data Provider**
+   - Locate and connect to the `Library.mdf` file  
+   - From database properties copy the generated **connection string** (Data Source=...)
+
+4. Update the connection string in `Web.config` in Solution Explorer:
 ``` r
 <connectionStrings>
-  <add name="dbcon" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Git\The-book-borrower\Library.mdf;Integrated Security=True;Connect Timeout=30"
-  providerName="Microsoft.Data.SqlClient" />
+  <add name="dbcon"
+       connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=YOUR_CONNECTION_STRING_HERE;Integrated Security=True;Connect Timeout=30"
+       providerName="Microsoft.Data.SqlClient" />
 </connectionStrings>
 ``` 
 
-5. Replace existing Data source with the one you copied.
-6. Installation of solution is now complete, all you need is to deploy it and share to friends.
 
-## How to use it
 
-Each registered user is welcomed to offer his own books for exchange. those books are then added to book database, with information who is the owner of each book in the database (along with other book informations like book ID, title, author, and optional information like publication year, description and picture). 
+## 🔐 Login credentials
 
-On the Borrow page, user can digitally borrow the book. By selecting username of book owner, book ID and date an exchange is made and seen in List of currently borrowed books, along wih all other exchanges. To return the book everything is the same, except at the end of form you click Return book. 
+### Admin
+- Username: admin  
+- Password: admin  
 
-On My profile page user can edit his own data and see his books that are currently borrowed and by whom. 
-
-Administrator is the one who can add, change or delete books from database and he can also add or delete users. 
-
-## Login credentials
-
-__Admin credentials__:
-
-- user: `admin`
-- password: `admin`
-
-__Users credentials__:
-
-- user: `coconut`
-- password: `cococatherine`  
->
-- user: `thebuilder`
-- password: `letsbuild0`
->
-- user: `king`
-- password: `longlivetheking1`
->
+### Users
+- coconut / cococatherine  
+- thebuilder / letsbuild0  
+- king / longlivetheking1  
