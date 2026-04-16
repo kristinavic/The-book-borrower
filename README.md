@@ -1,3 +1,5 @@
+# 📚 The Book Borrower
+
 ## 📑 Table of Contents
 
 - [🧾 Description](#-description)
@@ -8,14 +10,13 @@
 - [⚙️ Installation](#️-installation)
 - [▶️ Usage](#️-usage)
 - [🔑 Demo Credentials](#-demo-credentials)
-- [📸 Screenshots](#-screenshots)
+- [📷 Screenshots](#-screenshots)
 - [🎯 Purpose](#-purpose)
 - [📚 Key Learnings](#-key-learnings)
 - [⚠️ Known Limitations](#️-known-limitations)
 - [🔗 Future Improvements](#-future-improvements)
 - [👩‍💻 Author](#-author)
 
-# 📚 The Book Borrower
 
 A full-stack web application for managing book borrowing and user exchanges within a small community, built using ASP.NET Web Forms and SQL Server.
 
@@ -82,7 +83,7 @@ git clone https://github.com/kristinavic/The-book-borrower.git
 - Copy the generated connection string
 
 4. Update the connection string in Web.config:
-```
+```xml
 <connectionStrings>
   <add name="dbcon"
        connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=YOUR_CONNECTION_STRING_HERE;Integrated Security=True;Connect Timeout=30"
