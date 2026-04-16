@@ -1,25 +1,24 @@
 # 📚 The Book Borrower
 
+A full-stack web application for managing book borrowing and user exchanges, with focus on backend development, database design, and real-world application logic.
+
+
 ## 📑 Table of Contents
 
-- [🧾 Description](#-description)
-- [✨ Features](#-features)
-- [🏗️ Architecture & Design](#️-architecture--design)
-- [🗄️ Database](#️-database)
-- [💻 Technologies](#-technologies)
-- [⚙️ Installation](#️-installation)
-- [▶️ Usage](#️-usage)
-- [🔑 Demo Credentials](#-demo-credentials)
-- [📷 Screenshots](#-screenshots)
-- [🎯 Purpose](#-purpose)
-- [📚 Key Learnings](#-key-learnings)
-- [⚠️ Known Limitations](#️-known-limitations)
-- [🔗 Future Improvements](#-future-improvements)
-- [👩‍💻 Author](#-author)
-
-
-A full-stack web application for managing book borrowing and user exchanges within a small community, built using ASP.NET Web Forms and SQL Server.
-
+- [🧾 Description](#description)
+- [✨ Features](#features)
+- [🏗️ Architecture & Design](#architecture--design)
+- [🗄️ Database](#database)
+- [💻 Technologies](#technologies)
+- [⚙️ Installation](#installation)
+- [▶️ Usage](#usage)
+- [🔑 Demo Credentials](#demo-credentials)
+- [📷 Screenshots](#screenshots)
+- [🎯 Purpose](#purpose)
+- [📚 Key Learnings](#key-learnings)
+- [⚠️ Known Limitations](#known-limitations)
+- [🔗 Future Improvements](#future-improvements)
+- [👩‍💻 Author](#author)
 
 ## 🧾 Description
 
@@ -59,7 +58,7 @@ This separation improves maintainability and clarity of the application.
 
 ## 💻 Technologies
 
-- **Backend:** C#, ASP.NET Web Forms  
+- **Backend:** C#, .NET Framework, ASP.NET Web Forms  
 - **Frontend:** HTML, CSS, JavaScript  
 - **Database:** SQL Server  
 - **Tools:** Visual Studio  
@@ -93,11 +92,13 @@ git clone https://github.com/kristinavic/The-book-borrower.git
 
 
 ## ▶️ Usage
-- Log in using provided credentials
-- Browse available books
-- Borrow and return books
-- Track borrowed items
-- Admin users can manage books and users
+
+- Log in using provided credentials  
+- Browse and search available books  
+- Borrow books from other users  
+- Return borrowed books  
+- Track borrowing activity  
+- Admin users can manage books and users  
 
 
 ## 🔑 Demo Credentials
