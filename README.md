@@ -1,50 +1,116 @@
-# 📚 The Book borrower (Library management system) 
+# 📚 The Book Borrower
 
-A full-stack web application for managing book borrowing and user exchanges in a small community, built as a portfolio project using ASP.NET Web Forms and SQL Server.
-
-
-## 📌 Project description
-This application allows users to manage book borrowing within a small community. They can share books, borrow from others, and track exchanges — similar to a simplified library system.
+A full-stack web application for managing book borrowing and user exchanges, with focus on backend development, database design, and real-world application logic.
 
 
-## 🛠️ Tech stack
-- ASP.NET Web Forms, C#
-- SQL Server
-- HTML, CSS, JavaScript
+## 📑 Table of Contents
+
+- [🧾 Description](#description)
+- [✨ Features](#features)
+- [🏗️ Architecture & Design](#architecture--design)
+- [🗄️ Database](#database)
+- [💻 Technologies](#technologies)
+- [⚙️ Installation](#installation)
+- [▶️ Usage](#usage)
+- [🔑 Demo Credentials](#demo-credentials)
+- [📷 Screenshots](#screenshots)
+- [🎯 Purpose](#purpose)
+- [📚 Key Learnings](#key-learnings)
+- [⚠️ Known Limitations](#known-limitations)
+- [🔗 Future Improvements](#future-improvements)
+- [👩‍💻 Author](#author)
+
+## 🧾 Description
+
+This project was developed as a portfolio application to simulate a real-world library system on a smaller scale.
+
+It allows users to share books, borrow from others, and track exchanges, with a focus on backend development, database design, and application logic.
 
 
-## 🚀 Features
-- User registration and login
-- Add, edit and delete books (admin)
-- Browse available books
-- Borrow and return books
-- Track currently borrowed books
-- User profile management
+## ✨ Features
 
-## 🧭 How it works
+- User registration and authentication  
+- Add, edit, and delete books (admin role)  
+- Browse available books  
+- Borrow and return books  
+- Track currently borrowed books  
+- User profile management  
 
-### 📚 Books
-Users can add their own books to the shared database. Each book includes:
-- Title and author
-- Owner information
-- Optional details (year, description, image)
 
-### 🔄 Borrowing system
-- Users can borrow books by selecting:
-  - Book ID
-  - Owner username
-  - Date
-- Borrowed books are displayed in a shared list
-- Returning a book follows the same process
+## 🏗️ Architecture & Design
 
-### 👤 User profile
-- Users can edit their personal data
-- View which of their books are currently borrowed
+The application follows a structured approach:
 
-### 🛠 Admin role
-Administrator can:
-- Add, edit and delete books
-- Manage users
+- **Presentation Layer** – ASP.NET Web Forms UI  
+- **Business Logic Layer** – borrowing workflows and rules  
+- **Data Access Layer** – SQL Server database interaction  
+
+This separation improves maintainability and clarity of the application.
+
+
+## 🗄️ Database
+
+- Built using SQL Server  
+- Stores users, books, and borrowing records  
+- Supports relational data and borrowing workflows  
+- Handles CRUD operations and data consistency  
+
+
+## 💻 Technologies
+
+- **Backend:** C#, .NET Framework, ASP.NET Web Forms  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Database:** SQL Server  
+- **Tools:** Visual Studio  
+
+
+## ⚙️ Installation
+
+1. Clone or download the repository  
+
+```bash
+git clone https://github.com/kristinavic/The-book-borrower.git
+```
+
+2. Open the solution Izposoja.sln in Visual Studio
+
+3. Configure the database:
+- Open Server Explorer → Add Connection
+- Select Microsoft SQL Server Database File (SqlClient)
+- Choose Microsoft SqlClient Data Provider
+- Locate and connect to the Library.mdf file
+- Copy the generated connection string
+
+4. Update the connection string in Web.config:
+```xml
+<connectionStrings>
+  <add name="dbcon"
+       connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=YOUR_CONNECTION_STRING_HERE;Integrated Security=True;Connect Timeout=30"
+       providerName="Microsoft.Data.SqlClient" />
+</connectionStrings>
+```
+
+
+## ▶️ Usage
+
+- Log in using provided credentials  
+- Browse and search available books  
+- Borrow books from other users  
+- Return borrowed books  
+- Track borrowing activity  
+- Admin users can manage books and users  
+
+
+## 🔑 Demo Credentials
+
+**Admin**
+- Username: admin
+- Password: admin
+
+**Users**
+- coconut / cococatherine
+- thebuilder / letsbuild0
+- king / longlivetheking1
 
 
 ## 📷 Screenshots
@@ -63,58 +129,40 @@ Administrator can:
 ![Profile](./screenshots/profile.png)
 
 
+## 🎯 Purpose
 
-## 📚 What I learned
-- Designing and working with relational databases (SQL)
-- Implementing business logic for real-world scenarios
+This project was built to strengthen my skills in backend development, database design, and implementing real-world application logic.
+
+It represents my transition into software development and my focus on building data-driven applications.
+
+
+## 📚 Key Learnings
+
+- Designing and working with relational databases (SQL Server)
+- Implementing business logic for real-world workflows
 - Handling user interactions in ASP.NET Web Forms
 - Managing data flow between UI and database
 
 
-## ⚠️ Known limitations
-- Usernames of other users are required for borrowing but not easily discoverable (list of usernames is only available to  admin)
-- Book and user data visibility is not restricted to logged-in users
-- Limited user insight into borrowed items (the user only sees books borrowed from them, but not books they have borrowed from others)
+## ⚠️ Known Limitations
+
+- Borrowing requires knowing other users’ usernames
+- Limited data visibility control for users
+- Users cannot fully track books they have borrowed
 
 
-## 🔮 Future improvements
-- Improve user visibility and privacy 
+## 🔗 Future Improvements
+- Improve user visibility and privacy
 - Enhance borrowing workflow and UX
 - Add better tracking of borrowed books
-- Modernize the application architecture (e.g. API-based backend)
+- Modernize architecture (e.g. API-based backend)
 
 
-## ▶️ Running locally
+## 👩‍💻 Author
 
-1. Clone or download the repository.
+Kristina Vičič
 
-2. Open the solution `Izposoja.sln` in Visual Studio.
+GitHub: https://github.com/kristinavic
 
-3. Configure the database:
-   - Open **Server Explorer** → Add Connection  
-   - Select **Microsoft SQL Server Database File (SqlClient)** 
-   - Choose Microsoft **SqlClient Data Provider**
-   - Locate and connect to the `Library.mdf` file  
-   - From database properties copy the generated **connection string** (Data Source=...)
+LinkedIn: https://linkedin.com/in/kristinavicic
 
-4. Update the connection string in `Web.config` in Solution Explorer:
-``` r
-<connectionStrings>
-  <add name="dbcon"
-       connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=YOUR_CONNECTION_STRING_HERE;Integrated Security=True;Connect Timeout=30"
-       providerName="Microsoft.Data.SqlClient" />
-</connectionStrings>
-``` 
-
-
-
-## 🔐 Login credentials
-
-### Admin
-- Username: admin  
-- Password: admin  
-
-### Users
-- coconut / cococatherine  
-- thebuilder / letsbuild0  
-- king / longlivetheking1  
